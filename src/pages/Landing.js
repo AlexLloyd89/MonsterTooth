@@ -11,14 +11,14 @@ export default function Landing() {
       <div className="introMain">
         <div
           className="introChunk"
-          style={{ borderRight: "2px solid #46ad9b" }}
+          style={{ borderRight: "2px solid #4fcdaf" }}
         >
           <h1 className="introHeader">Design</h1>
           <p>Flavor Text will go here</p>
         </div>
         <div
           className="introChunk"
-          style={{ borderRight: "2px solid #46ad9b" }}
+          style={{ borderRight: "2px solid #4fcdaf" }}
         >
           <h1 className="introHeader">Develop</h1>
           <p>Flavor Text will go here</p>
@@ -50,10 +50,10 @@ export default function Landing() {
         </p>
         <div className="cardContainer">
           <div className="aboutCard">
-            <img src={alex} />
+            <img src={alex} alt="alex" />
           </div>
           <div className="aboutCard">
-            <img src={barry} />
+            <img src={barry} alt="barry" />
           </div>
         </div>
       </div>

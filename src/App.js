@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
-import Landing from "../src/pages/Landing";
-import Work from "../src/pages/Work";
-import Contact from "../src/pages/Contact";
+import Landing from "./pages/Landing";
+import Work from "./pages/Work";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           boxShadow: "0px 3px 6px 1px #000000b3"
         }}
       >
-        <div style={{ maxWidth: 1170, margin: "0 auto" }}>
+        <div style={{ maxWidth: 1170, margin: "0 auto", paddingBottom: 75 }}>
           <Header />
           <Switch>
             <Route exact path="/" component={Landing} />
