@@ -1,0 +1,21 @@
+.intro {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.content {
+  display: flex;
+}
+
+.flavor {
+  width: 50%;
+  border-right: 2px teal solid;
+}
+
+.contact {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}

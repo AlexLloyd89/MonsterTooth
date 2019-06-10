@@ -25,7 +25,7 @@
 .card {
   width: 240px;
   height: 320px;
-  background: teal;
+  background: #4fcdaf;
   margin: 20px;
 }
 
@@ -37,7 +37,7 @@
 .aboutCard {
   width: 240px;
   height: 320px;
-  background: teal;
+  background: #4fcdaf;
   margin: 20px;
   overflow: hidden;
 }
