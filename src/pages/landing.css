@@ -1,0 +1,43 @@
+/* Intro  */
+.introMain {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.introHeader {
+  font-size: 64px;
+}
+
+.introChunk {
+  min-width: 390px;
+}
+
+/* Work */
+.workMain {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.card {
+  width: 240px;
+  height: 320px;
+  background: teal;
+  margin: 20px;
+}
+
+/* About */
+.cardContainer {
+  display: flex;
+  justify-content: center;
+}
+.aboutCard {
+  width: 240px;
+  height: 320px;
+  background: teal;
+  margin: 20px;
+  overflow: hidden;
+}

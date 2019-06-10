@@ -1,0 +1,18 @@
+body {
+  padding-bottom: 150px;
+  margin: 0;
+}
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #2b1c2f;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
