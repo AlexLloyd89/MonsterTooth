@@ -59,20 +59,20 @@ export default function Landing() {
           </div>
         </div>
       </div> */}
-      <div className="wrap">
-        <div style={{ maxWidth: 1170, margin: "0 auto", paddingBottom: 75 }}>
-          <div className="introTop">
-            <div className="introStuff">
-              <h1>Design.</h1>
-              <h1>Develop.</h1>
-              <h1>Deploy.</h1>
-            </div>
-            <div className="introLogo">
-              <img src={Logo} alt="logo" style={{ height: 415 }} />
-            </div>
+
+      <div style={{ maxWidth: 1170, margin: "0 auto", paddingBottom: 75 }}>
+        <div className="introTop">
+          <div className="introStuff">
+            <h1>Design.</h1>
+            <h1>Develop.</h1>
+            <h1>Deploy.</h1>
+          </div>
+          <div className="introLogo">
+            <img src={Logo} alt="logo" style={{ height: 415 }} />
           </div>
         </div>
       </div>
+
       {/* <div className="angle" /> */}
     </Fragment>
   );

@@ -24,4 +24,13 @@ h5 {
   display: flex;
   justify-content: center;
   color: #3e7d78c7;
+  z-index: 2;
+}
+.wrap {
+  background: rgb(157, 228, 215);
+  background: linear-gradient(
+    -45deg,
+    rgba(157, 228, 215, 1) 50%,
+    rgba(245, 245, 245, 1) 50.1%
+  );
 }
