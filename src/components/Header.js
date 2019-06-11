@@ -1,20 +1,19 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+
 import "./header.css";
-import Logo from "./images/MonsterTooth_logo.png";
 
 export default function Header() {
   return (
     <Fragment>
       <div id="header">
         <h2>
-          <Link to="/work">Work</Link>
+          <a href="#work">Work</a>
         </h2>
-        <Link to="/">
-          <img src={Logo} alt="Monster Tooth Logo" />
-        </Link>
         <h2>
-          <Link to="/contact">Contact</Link>
+          <a href="#about">About</a>
+        </h2>
+        <h2>
+          <a href="#contact">Contact</a>
         </h2>
       </div>
     </Fragment>

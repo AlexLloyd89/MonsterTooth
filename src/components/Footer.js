@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "../components/images/MonsterTooth_logo.png";
+import Logo from "../components/images/logo.png";
 import Bounce from "react-reveal/Bounce";
 
 export default class Footer extends Component {
