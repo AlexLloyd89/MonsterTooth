@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Landing from "./pages/Landing";
 import Work from "./pages/Work";
@@ -25,18 +26,8 @@ function App() {
           </Switch>
         </div>
       </div>
-      <footer
-        style={{
-          position: "fixed",
-          bottom: 0,
-          height: 200,
-          width: "100%",
-          zIndex: -99,
-          background: "purple"
-        }}
-      >
-        I am the footer
-      </footer>
+
+      <Footer />
     </BrowserRouter>
   );
 }

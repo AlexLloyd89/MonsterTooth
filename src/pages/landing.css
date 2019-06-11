@@ -41,3 +41,10 @@
   margin: 20px;
   overflow: hidden;
 }
+
+/* Snaggle */
+.logoFooter {
+  position: fixed;
+  bottom: 15px;
+  z-index: -1;
+}
