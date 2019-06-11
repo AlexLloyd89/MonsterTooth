@@ -1,13 +1,16 @@
 #header {
+  position: sticky;
+  top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  max-width: 700px;
+
   margin: 0 auto;
 }
 
 h2 {
   min-width: 115px;
+  padding: 0 20px;
 }
 
 h2:hover {

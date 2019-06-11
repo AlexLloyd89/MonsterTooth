@@ -28,7 +28,7 @@ export default function Contact() {
             <p>Snaggle</p>
           </div>
           <div className="social">
-            <h1>Social Medial</h1>
+            <h1>Social Media</h1>
             <p>LinkedIn</p>
           </div>
         </div>

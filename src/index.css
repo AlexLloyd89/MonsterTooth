@@ -1,6 +1,7 @@
 body {
   padding-bottom: 150px;
   margin: 0;
+  overflow-x: hidden;
 }
 a,
 h1,
@@ -15,4 +16,12 @@ h5 {
 
 * {
   font-family: "Open Sans", sans-serif;
+}
+
+.chevron {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  color: #3e7d78c7;
 }

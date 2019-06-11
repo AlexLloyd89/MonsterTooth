@@ -1,5 +1,7 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React, { Fragment } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Landing from "./pages/Landing";
 import Work from "./pages/Work";
@@ -7,7 +9,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Fragment>
       <div
         style={{
           background: "#f5f5f5",
@@ -16,28 +18,18 @@ function App() {
           boxShadow: "0px 3px 6px 1px #000000b3"
         }}
       >
-        <div style={{ maxWidth: 1170, margin: "0 auto", paddingBottom: 75 }}>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={Landing} />
-            <Work path="/work" component={Work} />
-            <Contact path="/contact" component={Contact} />
-          </Switch>
+        <Header />
+
+        <Landing />
+        <Work />
+        <Contact />
+        <div className="chevron">
+          <FontAwesomeIcon icon={faChevronDown} size="5x" />
         </div>
       </div>
-      <footer
-        style={{
-          position: "fixed",
-          bottom: 0,
-          height: 200,
-          width: "100%",
-          zIndex: -99,
-          background: "purple"
-        }}
-      >
-        I am the footer
-      </footer>
-    </BrowserRouter>
+
+      <Footer />
+    </Fragment>
   );
 }
 

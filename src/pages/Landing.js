@@ -1,13 +1,15 @@
 import React, { Fragment } from "react";
+
 import WorkCard from "../components/WorkCard";
 import alex from "../components/images/alex.png";
 import barry from "../components/images/barry.png";
+import Logo from "../components/images/logo.png";
 import "./landing.css";
 
 export default function Landing() {
   return (
     <Fragment>
-      {/* Intro Section */}
+      {/* Intro Section
       <div className="introMain">
         <div
           className="introChunk"
@@ -27,15 +29,15 @@ export default function Landing() {
           <h1 className="introHeader">Deploy</h1>
           <p>Flavor Text will go here</p>
         </div>
-      </div>
+      </div> */}
       {/* Work Section */}
-      <div className="workMain">
+      {/* <div className="workMain">
         <WorkCard />
         <WorkCard />
         <WorkCard />
-      </div>
+      </div> */}
       {/* About Secion */}
-      <div className="aboutMain">
+      {/* <div className="aboutMain">
         <h1>About Us</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -56,7 +58,22 @@ export default function Landing() {
             <img src={barry} alt="barry" />
           </div>
         </div>
+      </div> */}
+      <div className="wrap">
+        <div style={{ maxWidth: 1170, margin: "0 auto", paddingBottom: 75 }}>
+          <div className="introTop">
+            <div className="introStuff">
+              <h1>Design.</h1>
+              <h1>Develop.</h1>
+              <h1>Deploy.</h1>
+            </div>
+            <div className="introLogo">
+              <img src={Logo} alt="logo" style={{ height: 415 }} />
+            </div>
+          </div>
+        </div>
       </div>
+      {/* <div className="angle" /> */}
     </Fragment>
   );
 }
