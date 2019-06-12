@@ -14,11 +14,6 @@ h1 {
   font-size: 80px;
 }
 
-.wrapWork {
-  background: rgb(245, 245, 245);
-  position: relative;
-}
-
 .backgroundWork {
   position: absolute;
   width: 375px;
@@ -28,4 +23,34 @@ h1 {
     rgba(255, 0, 0, 0) 73%,
     rgba(157, 228, 215, 1) 73.1%
   );
+}
+
+.card {
+  width: 240px;
+  height: 320px;
+  /* background: #4fcdaf; */
+  margin: 20px;
+  transition: 0.2s all, 0.1s background-image;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.cardBig {
+  box-shadow: 2px 2px 27px #00000029;
+  width: 878px;
+  height: 900px;
+  background-size: contain;
+  background-position: inherit;
+  overflow: auto;
+}
+
+.cardSmall {
+  width: 140px;
+  margin-top: 260px;
+}
+
+.cardContent {
+  margin-top: 450px;
 }

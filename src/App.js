@@ -18,11 +18,14 @@ function App() {
           boxShadow: "0px 3px 6px 1px #000000b3"
         }}
       >
-        <Header />
+        {/* <Header /> */}
         <div className="wrap">
           <Landing />
         </div>
-        <Work />
+
+        <div className="wrap2">
+          <Work />
+        </div>
         <Contact />
         <div className="chevron">
           <FontAwesomeIcon icon={faChevronDown} size="5x" />
