@@ -23,7 +23,6 @@ function App() {
           <Landing />
         </div>
         <Work />
-
         <Contact />
         <div className="chevron">
           <FontAwesomeIcon icon={faChevronDown} size="5x" />

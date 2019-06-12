@@ -11,7 +11,8 @@ h4,
 h5 {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  color: #5a4361;
+  /* color: #5a4361; */
+  color: #c1a7d2;
 }
 
 * {
@@ -24,13 +25,8 @@ h5 {
   display: flex;
   justify-content: center;
   color: #3e7d78c7;
-  z-index: 2;
+  z-index: 20;
 }
 .wrap {
-  background: rgb(157, 228, 215);
-  background: linear-gradient(
-    -45deg,
-    rgba(157, 228, 215, 1) 50%,
-    rgba(245, 245, 245, 1) 50.1%
-  );
+  background: rgb(49, 49, 49);
 }
