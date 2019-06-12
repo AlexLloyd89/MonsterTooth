@@ -6,6 +6,21 @@
   padding-top: 50px;
 }
 
+.introLogo {
+  text-align: center;
+}
+
+.logoTop {
+  text-align: left;
+  font-size: 72px !important;
+  margin-bottom: -35px !important;
+}
+
+.logoBottom {
+  color: #313131 !important;
+  font-size: 106px !important;
+}
+
 .introStuff h1 {
   color: #c1a7d2;
 }
@@ -58,8 +73,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  text-shadow: 2px 3px 2px #242525;
+  height: 950px;
+  text-shadow: 2px 3px 3px #000000ab;
 }
 
 .introTop h1 {

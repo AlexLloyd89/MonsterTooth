@@ -1,12 +1,23 @@
-.intro {
-  height: 50vh;
+.contactIntro {
+  height: 322px;
+  padding-top: 44px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.contactIntro h1 {
+  color: #c1a7d2;
+}
+
 .content {
   display: flex;
+}
+
+.content h1,
+h2,
+h3 {
+  color: #c1a7d2;
 }
 
 .flavor {
