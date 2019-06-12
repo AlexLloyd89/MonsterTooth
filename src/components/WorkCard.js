@@ -1,10 +1,18 @@
 import React, { Fragment } from "react";
-import phit from "./images/phit.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function WorkCard(props) {
   const { index, onClick, cardClass, cardBackground } = props;
   return (
-    <Fragment>
+    <div style={{ position: "relative" }}>
+      <div
+        className="closeButton"
+        style={{ display: props.isClicked ? "inline" : "none" }}
+        onClick={props.resetCards}
+      >
+        <FontAwesomeIcon icon={faTimes} size="3x" />
+      </div>
       <div
         onClick={() => onClick(index)}
         style={{ backgroundImage: `url(${cardBackground})` }}
@@ -14,7 +22,7 @@ export default function WorkCard(props) {
           <h1 style={{ marginBottom: 30 }}>Example Text</h1>
           <div
             className="flavor"
-            style={{ width: "42%", padding: 30, paddingTop: 0, float: "left" }}
+            style={{ width: "43%", padding: 30, paddingTop: 0, float: "left" }}
           >
             <h3>Header Text</h3>
             <p>
@@ -25,7 +33,7 @@ export default function WorkCard(props) {
             </p>
           </div>
           <div
-            style={{ width: "42%", padding: 30, paddingTop: 0, float: "left" }}
+            style={{ width: "43%", padding: 30, paddingTop: 0, float: "left" }}
           >
             <h3>Header Text</h3>
             <p>
@@ -37,6 +45,6 @@ export default function WorkCard(props) {
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }

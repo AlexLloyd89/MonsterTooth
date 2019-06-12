@@ -1,0 +1,23 @@
+.aboutMain h1 {
+  color: #c1a7d2;
+  text-shadow: 2px 3px 2px #242525;
+}
+.cityParallax {
+  background-image: url(https://images.unsplash.com/photo-1546782298-1b15bcddf574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+}
+.miniContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.aboutCard {
+  width: 240px;
+  height: 320px;
+  background: black;
+  margin: 20px;
+  box-shadow: 1px 2px 7px 0px #0000004a;
+}
+.aboutContact {
+  padding: 0 40px;
+  margin-top: -30px;
+}

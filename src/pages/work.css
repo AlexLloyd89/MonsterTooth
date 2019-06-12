@@ -25,16 +25,37 @@ h1 {
   );
 }
 
+.closeButton {
+  width: 50px;
+  height: 50px;
+  color: #689995;
+  position: absolute;
+  top: -38px;
+  right: 20px;
+}
+
+.closeButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .card {
   width: 240px;
   height: 320px;
-  /* background: #4fcdaf; */
+  background: #ffffff;
   margin: 20px;
-  transition: 0.2s all, 0.1s background-image;
+  transition: 0.2s all, 0.1s background-image, 0.1s transform;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   overflow: hidden;
+  box-shadow: 1px 2px 7px 0px #0000004a;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 1px 5px 12px 2px #0000004a;
 }
 
 .cardBig {
@@ -43,7 +64,6 @@ h1 {
   height: 900px;
   background-size: contain;
   background-position: inherit;
-  overflow: auto;
 }
 
 .cardSmall {
@@ -52,5 +72,5 @@ h1 {
 }
 
 .cardContent {
-  margin-top: 450px;
+  margin-top: 480px;
 }

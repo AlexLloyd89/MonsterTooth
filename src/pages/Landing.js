@@ -23,7 +23,9 @@ export default function Landing() {
             <h1>Deploy.</h1>
           </div>
           <div className="introLogo">
-            <img src={Logo} alt="logo" style={{ height: 415 }} />
+            <img src={Logo} alt="logo" style={{ height: 250 }} />
+            <h1 className="logoTop">Monster</h1>
+            <h1 className="logoBottom">Tooth</h1>
           </div>
         </div>
       </div>

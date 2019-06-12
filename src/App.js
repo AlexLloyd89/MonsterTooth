@@ -6,13 +6,14 @@ import Header from "./components/Header";
 import Landing from "./pages/Landing";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   return (
     <Fragment>
       <div
         style={{
-          background: "#f5f5f5",
+          background: "rgb(49, 49, 49)",
           marginBottom: 150,
           margin: 0,
           boxShadow: "0px 3px 6px 1px #000000b3"
@@ -26,7 +27,15 @@ function App() {
         <div className="wrap2">
           <Work />
         </div>
-        <Contact />
+
+        <div className="wrap3">
+          <About />
+        </div>
+
+        <div className="wrap4">
+          <Contact />
+        </div>
+
         <div className="chevron">
           <FontAwesomeIcon icon={faChevronDown} size="5x" />
         </div>

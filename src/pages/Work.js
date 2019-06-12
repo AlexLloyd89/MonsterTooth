@@ -5,11 +5,13 @@ import phitMobile from "../components/images/phitMobile.jpg";
 import acropolisMobile from "../components/images/acropolisMobile.jpg";
 import phitWeb from "../components/images/phit.jpg";
 import acropolisWeb from "../components/images/acropolis.jpg";
+import darkSkyGreens from "../components/images/greens.jpg";
 
 class Work extends React.Component {
   state = {
     isClicked: [false, false, false],
-    isSmall: [false, false, false]
+    isSmall: [false, false, false],
+    cardEnlarged: false
   };
 
   clickCard = index => {
@@ -19,14 +21,29 @@ class Work extends React.Component {
     newIsClicked[index] = true;
     newIsSmall[index] = false;
 
-    this.setState({ isClicked: newIsClicked, isSmall: newIsSmall });
+    this.setState({
+      isClicked: newIsClicked,
+      isSmall: newIsSmall,
+      cardEnlarged: true
+    });
+  };
+
+  resetCards = () => {
+    if (this.state.cardEnlarged) {
+      let newIsClicked = [false, false, false];
+      let newIsSmall = [false, false, false];
+      this.setState({
+        isClicked: newIsClicked,
+        isSmall: newIsSmall,
+        cardEnlarged: false
+      });
+    }
   };
 
   render() {
     return (
       <Fragment>
         <div className="wrapWork">
-          {/* <div className="backgroundWork" /> */}
           <div
             style={{
               maxWidth: 1170,
@@ -40,8 +57,10 @@ class Work extends React.Component {
             <p>Check out some projects we're proud of</p>
             <div id="work">
               <WorkCard
+                resetCards={this.resetCards}
                 cardBackground={this.state.isClicked[0] ? phitWeb : phitMobile}
                 mobileCard={phitMobile}
+                isClicked={this.state.isClicked[0]}
                 webCard={phitWeb}
                 index={0}
                 onClick={this.clickCard}
@@ -54,12 +73,14 @@ class Work extends React.Component {
                 }
               />
               <WorkCard
+                resetCards={this.resetCards}
                 cardBackground={
                   this.state.isClicked[1] ? acropolisWeb : acropolisMobile
                 }
                 mobileCard={acropolisMobile}
                 webCard={acropolisWeb}
                 index={1}
+                isClicked={this.state.isClicked[1]}
                 onClick={this.clickCard}
                 cardClass={
                   this.state.isClicked[1]
@@ -71,7 +92,14 @@ class Work extends React.Component {
                 isClicked={this.state.isClicked[1]}
               />
               <WorkCard
+                resetCards={this.resetCards}
+                cardBackground={
+                  this.state.isClicked[1] ? darkSkyGreens : darkSkyGreens
+                }
                 index={2}
+                mobileCard={darkSkyGreens}
+                webCard={darkSkyGreens}
+                isClicked={this.state.isClicked[2]}
                 onClick={this.clickCard}
                 cardClass={
                   this.state.isClicked[2]
