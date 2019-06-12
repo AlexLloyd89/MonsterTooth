@@ -60,7 +60,13 @@ export default function Landing() {
         </div>
       </div> */}
 
-      <div style={{ maxWidth: 1170, margin: "0 auto", paddingBottom: 75 }}>
+      <div
+        style={{
+          maxWidth: 1170,
+          margin: "0 auto"
+        }}
+      >
+        <div className="background" />
         <div className="introTop">
           <div className="introStuff">
             <h1>Design.</h1>
@@ -72,8 +78,6 @@ export default function Landing() {
           </div>
         </div>
       </div>
-
-      {/* <div className="angle" /> */}
     </Fragment>
   );
 }

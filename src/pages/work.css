@@ -16,9 +16,16 @@ h1 {
 
 .wrapWork {
   background: rgb(245, 245, 245);
+  position: relative;
+}
+
+.backgroundWork {
+  position: absolute;
+  width: 375px;
+  height: 100vh;
   background: linear-gradient(
     -45deg,
-    rgba(245, 245, 245, 1) 83.1%,
-    rgba(157, 228, 215, 1) 83.2%
+    rgba(255, 0, 0, 0) 73%,
+    rgba(157, 228, 215, 1) 73.1%
   );
 }

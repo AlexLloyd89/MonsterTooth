@@ -6,6 +6,11 @@
   padding-top: 50px;
 }
 
+::selection {
+  background: #835284;
+  color: #d8369e;
+}
+
 .introHeader {
   font-size: 64px;
 }
@@ -57,6 +62,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
+  text-shadow: 2px 3px 2px #242525;
 }
 
 .introTop h1 {
@@ -75,14 +81,16 @@
   transform: skew(-45deg);
 }
 
-/* .wrap {
-  background: rgb(157, 228, 215);
+.background {
+  position: absolute;
+  width: 2000px;
+  height: 104vh;
   background: linear-gradient(
     -45deg,
-    rgba(157, 228, 215, 1) 50%,
-    rgba(245, 245, 245, 1) 50.1%
+    rgba(157, 228, 215, 1) 66.8%,
+    rgb(49, 49, 49) 66.9%
   );
-} */
+}
 
 #work {
   display: flex;
