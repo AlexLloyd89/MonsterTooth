@@ -11,8 +11,7 @@ h4,
 h5 {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  /* color: #5a4361; */
-  color: #c1a7d2;
+  color: #5a4361;
 }
 
 * {
@@ -28,5 +27,10 @@ h5 {
   z-index: 20;
 }
 .wrap {
-  background: rgb(49, 49, 49);
+  background-image: url(./components/images/bg1.png);
+  background-position: center;
+}
+.wrap2 {
+  background-image: url(./components/images/bg2.png);
+  background-position: center;
 }

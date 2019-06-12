@@ -6,6 +6,10 @@
   padding-top: 50px;
 }
 
+.introStuff h1 {
+  color: #c1a7d2;
+}
+
 ::selection {
   background: #835284;
   color: #d8369e;
@@ -25,13 +29,6 @@
   justify-content: center;
   text-align: center;
   padding-top: 50px;
-}
-
-.card {
-  width: 240px;
-  height: 320px;
-  background: #4fcdaf;
-  margin: 20px;
 }
 
 /* About */
