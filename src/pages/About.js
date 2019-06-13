@@ -44,7 +44,13 @@ export default function About() {
               about us. Don't read this.
             </p>
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap"
+            }}
+          >
             <AboutCard />
             <AboutCard />
             <AboutCard />

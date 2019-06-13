@@ -1,13 +1,11 @@
 /* Intro  */
-.introMain {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding-top: 50px;
-}
 
 .introLogo {
   text-align: center;
+}
+
+.logoImg {
+  height: 250px;
 }
 
 .logoTop {
@@ -38,14 +36,6 @@
   min-width: 390px;
 }
 
-/* Work */
-.workMain {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-top: 50px;
-}
-
 /* About */
 .cardContainer {
   display: flex;
@@ -71,6 +61,7 @@
   position: relative;
   z-index: 2;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 950px;

@@ -6,6 +6,13 @@ import acropolisMobile from "../components/images/acropolisMobile.jpg";
 import phitWeb from "../components/images/phit.jpg";
 import acropolisWeb from "../components/images/acropolis.jpg";
 import darkSkyGreens from "../components/images/greens.jpg";
+import darkSkyGreensMobile from "../components/images/greensMobile.jpg";
+
+let x = window.matchMedia("(max-width: 700px)");
+
+function backgroundResponsive() {
+  return x.matches;
+}
 
 class Work extends React.Component {
   state = {
@@ -13,6 +20,11 @@ class Work extends React.Component {
     isSmall: [false, false, false],
     cardEnlarged: false
   };
+
+  componentDidMount() {
+    x.addListener(backgroundResponsive);
+    this.setState({ mobile: backgroundResponsive() });
+  }
 
   clickCard = index => {
     let newIsClicked = [false, false, false];
@@ -57,6 +69,7 @@ class Work extends React.Component {
             <p>Check out some projects we're proud of</p>
             <div id="work">
               <WorkCard
+                isMobile={this.state.mobile}
                 resetCards={this.resetCards}
                 cardBackground={this.state.isClicked[0] ? phitWeb : phitMobile}
                 mobileCard={phitMobile}
@@ -73,6 +86,7 @@ class Work extends React.Component {
                 }
               />
               <WorkCard
+                isMobile={this.state.mobile}
                 resetCards={this.resetCards}
                 cardBackground={
                   this.state.isClicked[1] ? acropolisWeb : acropolisMobile
@@ -92,12 +106,13 @@ class Work extends React.Component {
                 isClicked={this.state.isClicked[1]}
               />
               <WorkCard
+                isMobile={this.state.mobile}
                 resetCards={this.resetCards}
                 cardBackground={
-                  this.state.isClicked[1] ? darkSkyGreens : darkSkyGreens
+                  this.state.isClicked[1] ? darkSkyGreens : darkSkyGreensMobile
                 }
                 index={2}
-                mobileCard={darkSkyGreens}
+                mobileCard={darkSkyGreensMobile}
                 webCard={darkSkyGreens}
                 isClicked={this.state.isClicked[2]}
                 onClick={this.clickCard}
