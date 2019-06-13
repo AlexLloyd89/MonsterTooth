@@ -32,15 +32,25 @@ export default function About() {
           <div className="miniContainer">
             <p>
               Monster Tooth is a Raleigh, NC based web development agency. Born
-              out of the love for coding that Alex and Barry share, Monster
+              out of the love for coding that Alex and Barry share. Monster
               tooth wants nothing more than to help{" "}
               <span style={{ fontWeight: "bold" }}>you</span> build that really
               cool app you thought of while you were falling asleep that one
-              night
+              night.
             </p>
             <p>
-              If you're reading this trying to figure out if we are the right
-              shop to hire....
+              Being a small, yet experienced shop, means that your project will
+              always be a top priority for us. Need a deadline moved? No
+              problem. Want to add a feature you didn't think of when we we're
+              still prototpying? Sounds great. Decided that you like{" "}
+              <span style={{ color: "rgb(80, 140, 135)", fontWeight: "bold" }}>
+                this color
+              </span>{" "}
+              more than{" "}
+              <span style={{ color: "#55a7a2", fontWeight: "bold" }}>
+                this color
+              </span>
+              ? Easy.
             </p>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>

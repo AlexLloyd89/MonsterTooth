@@ -29,7 +29,13 @@ a {
   font-family: "Open Sans", sans-serif;
 }
 
+p {
+  color: "#313131";
+}
+
 .chevron {
+  transition: 0.5s transform;
+  transform: rotate(0deg);
   position: sticky;
   bottom: 0;
   display: flex;
@@ -37,6 +43,18 @@ a {
   color: #3e7d78c7;
   z-index: 20;
 }
+
+.chevronFlip {
+  transition: 0.5s transform;
+  transform: rotate(180deg);
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  color: #3e7d78c7;
+  z-index: 20;
+}
+
 #wrap {
   background-image: url(./components/images/bg1.png);
   background-position: center;
