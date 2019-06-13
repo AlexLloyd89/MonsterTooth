@@ -1,7 +1,6 @@
 .contactIntro {
-  height: 322px;
-  padding-top: 44px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -18,11 +17,6 @@
 h2,
 h3 {
   color: #c1a7d2;
-}
-
-.flavor {
-  width: 50%;
-  border-right: 2px #9de4d7 solid;
 }
 
 .contact {

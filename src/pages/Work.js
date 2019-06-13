@@ -6,7 +6,14 @@ import acropolisMobile from "../components/images/acropolisMobile.jpg";
 import phitWeb from "../components/images/phit.jpg";
 import acropolisWeb from "../components/images/acropolis.jpg";
 import darkSkyGreens from "../components/images/greens.jpg";
+import darkSkyGreensMobile from "../components/images/greensMobile.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
+let x = window.matchMedia("(max-width: 700px)");
+
+function backgroundResponsive() {
+  return x.matches;
+}
 
 class Work extends React.Component {
   state = {
@@ -14,6 +21,11 @@ class Work extends React.Component {
     isSmall: [false, false, false],
     cardEnlarged: false
   };
+
+  componentDidMount() {
+    x.addListener(backgroundResponsive);
+    this.setState({ mobile: backgroundResponsive() });
+  }
 
   clickCard = index => {
     let newIsClicked = [false, false, false];
@@ -64,23 +76,17 @@ class Work extends React.Component {
               position: "relative"
             }}
           >
-            <h1 style={{ textShadow: "2px 3px 3px #242525" }}>
+            <h1
+              className="workHeader"
+              style={{ textShadow: "2px 3px 3px #242525" }}
+            >
               What We've Built
             </h1>
-            <p
-              style={{
-                margin: "auto",
-
-                textAlign: "center",
-                fontSize: 18
-              }}
-            >
-              Check out some projects we're proud of
-            </p>
 
             <div id="workCardContainer">
-              <AnchorLink href="#workCardContainer">
+              <AnchorLink href={this.state.mobile ? "" : "#workCardContainer"}>
                 <WorkCard
+                  isMobile={this.state.mobile}
                   resetCards={this.resetCards}
                   cardBackground={
                     this.state.isClicked[0] ? phitWeb : phitMobile
@@ -104,8 +110,9 @@ class Work extends React.Component {
                   developText="User interface/experience, protoyping, layout, database design, deployment. We took Phit from inital concept to completion. We are currently in the process of migrating Phit to a new host, so it may take a minute to start up"
                 />
               </AnchorLink>
-              <AnchorLink href="#workCardContainer">
+              <AnchorLink href={this.state.mobile ? "" : "#workCardContainer"}>
                 <WorkCard
+                  isMobile={this.state.mobile}
                   resetCards={this.resetCards}
                   cardBackground={
                     this.state.isClicked[1] ? acropolisWeb : acropolisMobile
@@ -130,14 +137,17 @@ class Work extends React.Component {
                   developText="User interface/experience, layout, re-design. We completely re-designed and modernized AE's old website to the current sleek and mobile friendly site you see now"
                 />
               </AnchorLink>
-              <AnchorLink href="#workCardContainer">
+              <AnchorLink href={this.state.mobile ? "" : "#workCardContainer"}>
                 <WorkCard
+                  isMobile={this.state.mobile}
                   resetCards={this.resetCards}
                   cardBackground={
-                    this.state.isClicked[1] ? darkSkyGreens : darkSkyGreens
+                    this.state.isClicked[2]
+                      ? darkSkyGreens
+                      : darkSkyGreensMobile
                   }
                   index={2}
-                  mobileCard={darkSkyGreens}
+                  mobileCard={darkSkyGreensMobile}
                   webCard={darkSkyGreens}
                   isClicked={this.state.isClicked[2]}
                   onClick={this.clickCard}
@@ -151,9 +161,9 @@ class Work extends React.Component {
                   isClicked={this.state.isClicked[2]}
                   cardTitle="Dark Sky Greens"
                   designHeader="What Is Dark Sky Greens"
-                  designText="BARRY WHAT DOES YOUR FRIENDS COMPANY DO"
-                  developHeader="What We are currently Working on"
-                  developText="Again, b-dawg plz specify"
+                  designText="Dark Sky Greens sells locally grown microgreens to individuals and small businesses."
+                  developHeader="What We are currently Working On"
+                  developText="Under construction!"
                 />
               </AnchorLink>
             </div>

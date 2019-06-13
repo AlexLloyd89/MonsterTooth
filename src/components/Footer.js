@@ -16,23 +16,14 @@ export default class Footer extends Component {
           alignItems: "flex-end"
         }}
       >
-        <img
-          src={Logo}
-          style={{
-            transform: "rotate(161deg)",
-            position: "fixed",
-            bottom: "11%",
-            left: "9%",
-            width: "6%"
-          }}
-        />
+        <img id="snaggle" src={Logo} />
         <div className="footWrap">
           <div className="footContent">
             <div className="credits">
               <div className="creditHeader">
                 <h1 style={{ fontSize: 30 }}>Credits</h1>
               </div>
-              <p style={{ width: "250px" }}>
+              <p>
                 Icons made by{" "}
                 <a
                   href="https://www.flaticon.com/<?=_('authors').'/'?>surang"

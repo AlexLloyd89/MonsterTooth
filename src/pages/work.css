@@ -75,6 +75,21 @@ h1 {
   margin-top: 480px;
 }
 
+.flavor {
+  width: 43%;
+  padding: 30px;
+  padding-top: 0;
+  float: left;
+}
+
+.flavorLeft {
+  border-right: 2px teal solid;
+}
+
+.mobileCard h1 {
+  font-size: 45px !important;
+}
+
 .workHeader {
   display: flex;
   align-items: baseline;

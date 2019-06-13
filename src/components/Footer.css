@@ -21,4 +21,9 @@ footer a:hover {
 
 .footContent {
   display: flex;
+  justify-content: center;
+}
+
+.credits {
+  width: 43%;
 }
