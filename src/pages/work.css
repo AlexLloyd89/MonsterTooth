@@ -74,3 +74,8 @@ h1 {
 .cardContent {
   margin-top: 480px;
 }
+
+.workHeader {
+  display: flex;
+  align-items: baseline;
+}
