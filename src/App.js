@@ -15,9 +15,7 @@ class App extends React.Component {
   };
 
   handleScroll = () => {
-    console.log("I AM BODY HEIGHT " + this.state.bodyHeight);
     let scroll = window.scrollY;
-    console.log(scroll);
     if (scroll >= 0.93 * this.state.bodyHeight) {
       this.setState({ nextPosition: "#landing" });
     } else if (scroll >= 0.7 * this.state.bodyHeight) {

@@ -76,22 +76,15 @@ class Work extends React.Component {
               position: "relative"
             }}
           >
-            <h1 style={{ textShadow: "2px 3px 3px #242525" }}>
+            <h1
+              className="workHeader"
+              style={{ textShadow: "2px 3px 3px #242525" }}
+            >
               What We've Built
             </h1>
-            <p
-              style={{
-                margin: "auto",
-
-                textAlign: "center",
-                fontSize: 18
-              }}
-            >
-              Check out some projects we're proud of
-            </p>
 
             <div id="workCardContainer">
-              <AnchorLink href="#workCardContainer">
+              <AnchorLink href={this.state.mobile ? "" : "#workCardContainer"}>
                 <WorkCard
                   isMobile={this.state.mobile}
                   resetCards={this.resetCards}
@@ -117,7 +110,7 @@ class Work extends React.Component {
                   developText="User interface/experience, protoyping, layout, database design, deployment. We took Phit from inital concept to completion. We are currently in the process of migrating Phit to a new host, so it may take a minute to start up"
                 />
               </AnchorLink>
-              <AnchorLink href="#workCardContainer">
+              <AnchorLink href={this.state.mobile ? "" : "#workCardContainer"}>
                 <WorkCard
                   isMobile={this.state.mobile}
                   resetCards={this.resetCards}
@@ -144,15 +137,17 @@ class Work extends React.Component {
                   developText="User interface/experience, layout, re-design. We completely re-designed and modernized AE's old website to the current sleek and mobile friendly site you see now"
                 />
               </AnchorLink>
-              <AnchorLink href="#workCardContainer">
+              <AnchorLink href={this.state.mobile ? "" : "#workCardContainer"}>
                 <WorkCard
                   isMobile={this.state.mobile}
                   resetCards={this.resetCards}
                   cardBackground={
-                    this.state.isClicked[1] ? darkSkyGreens : darkSkyGreens
+                    this.state.isClicked[2]
+                      ? darkSkyGreens
+                      : darkSkyGreensMobile
                   }
                   index={2}
-                  mobileCard={darkSkyGreens}
+                  mobileCard={darkSkyGreensMobile}
                   webCard={darkSkyGreens}
                   isClicked={this.state.isClicked[2]}
                   onClick={this.clickCard}

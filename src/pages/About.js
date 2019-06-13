@@ -6,6 +6,8 @@ import Alex from "../components/images/alex.png";
 import Barry from "../components/images/barry.png";
 import Scotty from "../components/images/scotty.jpg";
 
+const scot = `Sales${<br />}Consultant`;
+
 export default function About() {
   return (
     <Fragment>
@@ -24,6 +26,7 @@ export default function About() {
       <div className="container">
         <div className="aboutMain">
           <h1
+            className="aboutHeader"
             style={{ float: "right", position: "absolute", top: -80, right: 0 }}
           >
             About
@@ -53,22 +56,32 @@ export default function About() {
               ? Easy.
             </p>
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
+            style={{
+              alignItems: "start",
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap"
+            }}
+          >
             <AboutCard
               aboutText="Co-Founder, Designer, Developer"
               aboutPicture={Alex}
+              name="Alex Lloyd"
               emailAddress="mailto:alex@monstertooth.tech"
               email="Alex@monstertooth.tech"
             />
             <AboutCard
               aboutText="Co-Founder, Designer, Developer"
               aboutPicture={Barry}
+              name="Barry Riveroll"
               emailAddress="mailto:barry@monstertooth.tech"
               email="Barry@monstertooth.tech"
             />
             <AboutCard
               aboutText="Sales Consultant"
               aboutPicture={Scotty}
+              name="Scotty Kirchner"
               emailAddress="mailto:scotty@monstertooth.tech"
               email="Scotty@monstertooth.tech"
             />

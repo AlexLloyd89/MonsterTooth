@@ -5,20 +5,24 @@ export default function Contact() {
   return (
     <div className="container">
       <div className="contactIntro">
-        <h1 id="contact" style={{ textAlign: "center", marginTop: 330 }}>
+        <h1
+          className="contactHeader"
+          id="contact"
+          style={{ textAlign: "center", marginTop: 155 }}
+        >
           We Don't Bite
         </h1>
       </div>
 
       <div
         className="miniContainer"
-        style={{ color: "#f5f5f5", marginTop: 15 }}
+        style={{ color: "#f5f5f5", padding: "20px 50px" }}
       >
         <p>
           No matter what stage of the planning/building process you are at, we
           are happy to help. Fill out the form below and tell us a little bit
           about what you want. If that feels to impersonal though, you can
-          always shoot any of us a direct email :D
+          always shoot any of us a direct email.
         </p>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
