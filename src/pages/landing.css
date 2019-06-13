@@ -73,7 +73,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 950px;
+  height: 1080px;
   text-shadow: 2px 3px 3px #000000ab;
 }
 
@@ -104,7 +104,7 @@
   );
 }
 
-#work {
+#workCardContainer {
   display: flex;
   justify-content: center;
   text-align: center;

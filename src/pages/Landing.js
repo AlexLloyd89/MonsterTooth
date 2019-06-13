@@ -1,8 +1,4 @@
 import React, { Fragment } from "react";
-
-import WorkCard from "../components/WorkCard";
-import alex from "../components/images/alex.png";
-import barry from "../components/images/barry.png";
 import Logo from "../components/images/logo.png";
 import "./landing.css";
 
@@ -15,8 +11,7 @@ export default function Landing() {
           margin: "0 auto"
         }}
       >
-        {/* <div className="background" /> */}
-        <div className="introTop">
+        <div id="landing" className="introTop">
           <div className="introStuff">
             <h1>Design.</h1>
             <h1>Develop.</h1>
