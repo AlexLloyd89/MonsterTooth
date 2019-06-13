@@ -51,7 +51,9 @@ class App extends React.Component {
             background: "rgb(49, 49, 49)",
             marginBottom: 150,
             margin: 0,
-            boxShadow: "0px 3px 6px 1px #000000b3"
+            boxShadow: "0px 3px 6px 1px #000000b3",
+            zIndex: 10,
+            position: "relative"
           }}
         >
           <div id="wrap">
@@ -69,9 +71,22 @@ class App extends React.Component {
           <div id="wrap4">
             <Contact />
           </div>
-          <div id="footer" className="chevron">
+          <div
+            id="footer"
+            className={
+              this.state.nextPosition === "#landing" ? "chevronFlip" : "chevron"
+            }
+          >
             <AnchorLink href={this.state.nextPosition}>
-              <FontAwesomeIcon icon={faChevronDown} size="5x" />
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                size="5x"
+                style={
+                  this.state.nextPosition === "#landing"
+                    ? { filter: "drop-shadow(-3px -3px 3px black)" }
+                    : { filter: "drop-shadow(3px 3px 3px black)" }
+                }
+              />
             </AnchorLink>
           </div>
         </div>

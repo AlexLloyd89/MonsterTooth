@@ -44,7 +44,7 @@ export default function WorkCard(props) {
             }}
           >
             <h3 style={{ color: "#5a4361" }}>{designHeader}</h3>
-            <p style={{ textAlign: "left" }}>{designText}</p>
+            <p style={{ textAlign: "left", color: "#313131" }}>{designText}</p>
           </div>
           <div
             style={{
@@ -55,7 +55,7 @@ export default function WorkCard(props) {
             }}
           >
             <h3 style={{ color: "#5a4361" }}>{developHeader}</h3>
-            <p style={{ textAlign: "left" }}>{developText}</p>
+            <p style={{ textAlign: "left", color: "#313131" }}>{developText}</p>
           </div>
         </div>
       </div>
