@@ -1,0 +1,24 @@
+.footWrap {
+  flex-direction: column;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 960px;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a {
+  color: #313131;
+}
+
+footer a:hover {
+  color: purple;
+}
+
+.footContent {
+  display: flex;
+}

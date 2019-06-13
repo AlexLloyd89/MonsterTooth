@@ -89,3 +89,8 @@ h1 {
 .mobileCard h1 {
   font-size: 45px !important;
 }
+
+.workHeader {
+  display: flex;
+  align-items: baseline;
+}
