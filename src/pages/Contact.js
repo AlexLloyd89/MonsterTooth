@@ -21,8 +21,8 @@ export default function Contact() {
         <p>
           No matter what stage of the planning/building process you are at, we
           are happy to help. Fill out the form below and tell us a little bit
-          about what you want. If that feels to impersonal though, you can
-          always shoot any of us a direct email.
+          about what you want. If that feels too impersonal though, you can
+          always shoot any of us an email.
         </p>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>

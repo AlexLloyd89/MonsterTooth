@@ -6,8 +6,6 @@ import Alex from "../components/images/alex.png";
 import Barry from "../components/images/barry.png";
 import Scotty from "../components/images/scotty.jpg";
 
-const scot = `Sales${<br />}Consultant`;
-
 export default function About() {
   return (
     <Fragment>
@@ -36,7 +34,7 @@ export default function About() {
             <p>
               Monster Tooth is a Raleigh, NC based web development agency. Born
               out of the love for coding that Alex and Barry share. Monster
-              tooth wants nothing more than to help{" "}
+              Tooth wants nothing more than to help you{" "}
               <span style={{ fontWeight: "bold" }}>you</span> build that really
               cool app you thought of while you were falling asleep that one
               night.
@@ -44,8 +42,8 @@ export default function About() {
             <p>
               Being a small, yet experienced shop, means that your project will
               always be a top priority for us. Need a deadline moved? No
-              problem. Want to add a feature you didn't think of when we we're
-              still prototpying? Sounds great. Decided that you like{" "}
+              problem. Want to add a feature you didn't think of when we were
+              still prototyping? Sounds great. Decided that you like{" "}
               <span style={{ color: "rgb(80, 140, 135)", fontWeight: "bold" }}>
                 this color
               </span>{" "}
