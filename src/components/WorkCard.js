@@ -1,13 +1,15 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
+import NoAnchorCard from "./NoAnchorCard";
+import AnchorCard from "./AnchorCard";
 
 export default function WorkCard(props) {
   const {
     index,
     onClick,
-    cardClass,
     cardBackground,
+    siteLink,
+    cardClass,
     isMobile,
     mobileCard,
     cardTitle,
@@ -37,55 +39,31 @@ export default function WorkCard(props) {
         </div>
       </div>
     </div>
+  ) : cardClass === "cardBig" ? (
+    <NoAnchorCard
+      index={index}
+      onClick={onClick}
+      cardClass={cardClass}
+      cardBackground={cardBackground}
+      cardTitle={cardTitle}
+      designHeader={designHeader}
+      designText={designText}
+      developHeader={developHeader}
+      developText={developText}
+      siteLink={siteLink}
+    />
   ) : (
-    <div
-      style={{
-        position: "relative",
-        display: "flex",
-        justifyContent: "center"
-      }}
-    >
-      <div
-        className="closeButton"
-        style={{ display: props.isClicked ? "inline" : "none" }}
-        onClick={props.resetCards}
-      >
-        <FontAwesomeIcon icon={faTimes} size="3x" />
-      </div>
-
-      <div
-        id="card"
-        onClick={() => onClick(index)}
-        style={{ backgroundImage: `url(${cardBackground})` }}
-        className={`card ${cardClass}`}
-      >
-        <div className="cardContent">
-          <h1 style={{ textShadow: "3px 3px 5px #00000057" }}>{cardTitle}</h1>
-          <div
-            className="flavor"
-            style={{
-              width: "43%",
-              padding: 30,
-              paddingTop: 0,
-              float: "left"
-            }}
-          >
-            <h3 style={{ color: "#5a4361" }}>{designHeader}</h3>
-            <p style={{ textAlign: "left", color: "#313131" }}>{designText}</p>
-          </div>
-          <div
-            style={{
-              width: "43%",
-              padding: 30,
-              paddingTop: 0,
-              float: "left"
-            }}
-          >
-            <h3 style={{ color: "#5a4361" }}>{developHeader}</h3>
-            <p style={{ textAlign: "left", color: "#313131" }}>{developText}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <AnchorCard
+      index={index}
+      onClick={onClick}
+      cardClass={cardClass}
+      cardBackground={cardBackground}
+      cardTitle={cardTitle}
+      designHeader={designHeader}
+      designText={designText}
+      developHeader={developHeader}
+      developText={developText}
+      siteLink={siteLink}
+    />
   );
 }
