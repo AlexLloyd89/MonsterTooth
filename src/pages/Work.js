@@ -9,7 +9,7 @@ import darkSkyGreens from "../components/images/greens.jpg";
 import darkSkyGreensMobile from "../components/images/greensMobile.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-let x = window.matchMedia("(max-width: 700px)");
+let x = window.matchMedia("(max-width: 800px)");
 
 function backgroundResponsive() {
   return x.matches;
