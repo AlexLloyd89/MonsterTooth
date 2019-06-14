@@ -16,7 +16,8 @@ export default function NoAnchorCard(props) {
     designText,
     developHeader,
     developText,
-    siteLink
+    siteLink,
+    resetCards
   } = props;
   return (
     <div
@@ -28,8 +29,8 @@ export default function NoAnchorCard(props) {
     >
       <div
         className="closeButton"
-        style={{ display: props.isClicked ? "inline" : "none" }}
-        onClick={props.resetCards}
+        style={{ display: "inline" }}
+        onClick={resetCards}
       >
         <FontAwesomeIcon icon={faTimes} size="3x" />
       </div>

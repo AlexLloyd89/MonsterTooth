@@ -8,7 +8,7 @@ import acropolisWeb from "../components/images/acropolis.jpg";
 import darkSkyGreens from "../components/images/greens.jpg";
 import darkSkyGreensMobile from "../components/images/greensMobile.jpg";
 
-let x = window.matchMedia("(max-width: 700px)");
+let x = window.matchMedia("(max-width: 800px)");
 
 function backgroundResponsive() {
   return x.matches;

@@ -60,6 +60,7 @@ p {
 }
 
 #wrap {
+  position: relative;
   background-image: url(./components/images/bg1.png);
   background-position: center;
 }
@@ -68,11 +69,14 @@ p {
   background-image: url(./components/images/bg2.png);
   background-position: top;
   background-repeat: no-repeat;
+  position: relative;
 }
 #wrap3 {
+  position: relative;
   background: #f5f5f5;
 }
 #wrap4 {
+  position: relative;
   margin: -25px;
   background-image: linear-gradient(
     176deg,
@@ -99,7 +103,7 @@ p {
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) {
   .logoTop {
     font-size: 40px !important;
   }
@@ -111,6 +115,7 @@ p {
     justify-content: center !important;
     height: 740px !important;
     padding-bottom: 70px;
+    flex-direction: column;
   }
 
   .logoImg {
@@ -126,7 +131,8 @@ p {
   }
 
   .flavor {
-    width: 85% !important;
+    width: auto !important;
+    float: none !important;
   }
 
   .flavorLeft {
@@ -147,6 +153,12 @@ p {
 
   .footContent div {
     padding: 5px;
+    width: 50% !important;
+  }
+
+  .footContent {
+    align-items: start;
+    padding: 0 50px;
   }
 
   iframe {
@@ -160,7 +172,7 @@ p {
   }
   #snaggle {
     bottom: 16% !important;
-    left: 25% !important;
+    left: -5% !important;
     width: 76px !important;
   }
 
@@ -173,7 +185,11 @@ p {
   .aboutHeader {
     top: -71px !important;
   }
-  .contactHeader {
+  /* .contactHeader {
     margin-top: 186px !important;
+  } */
+
+  .footContent p {
+    margin: 2px 0;
   }
 }

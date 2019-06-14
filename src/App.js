@@ -7,6 +7,7 @@ import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import VisibilitySensor from "react-visibility-sensor";
 
 class App extends React.Component {
   state = {
@@ -14,18 +15,33 @@ class App extends React.Component {
     bodyHeight: "null"
   };
 
-  handleScroll = () => {
-    let scroll = window.scrollY;
-    if (scroll >= 0.93 * this.state.bodyHeight) {
-      this.setState({ nextPosition: "#landing" });
-    } else if (scroll >= 0.7 * this.state.bodyHeight) {
-      this.setState({ nextPosition: "#footer" });
-    } else if (scroll >= 0.45 * this.state.bodyHeight) {
-      this.setState({ nextPosition: "#contact" });
-    } else if (scroll > 0.28 * this.state.bodyHeight) {
-      this.setState({ nextPosition: "#about" });
-    } else if (scroll < 0.3 * this.state.bodyHeight) {
+  handleLandingVisibility = isVisible => {
+    if (isVisible) {
       this.setState({ nextPosition: "#work" });
+    }
+  };
+
+  handleWorkVisibility = isVisible => {
+    if (isVisible) {
+      this.setState({ nextPosition: "#about" });
+    }
+  };
+
+  handleAboutVisibility = isVisible => {
+    if (isVisible) {
+      this.setState({ nextPosition: "#contact" });
+    }
+  };
+
+  handleContactVisibility = isVisible => {
+    if (isVisible) {
+      this.setState({ nextPosition: "#footer" });
+    }
+  };
+
+  handleFooterVisibility = isVisible => {
+    if (isVisible) {
+      this.setState({ nextPosition: "#landing" });
     }
   };
 
@@ -35,11 +51,6 @@ class App extends React.Component {
         window.document.body.offsetHeight - window.innerHeight + addHeight
     });
   };
-
-  componentDidMount() {
-    this.updateBodyHeight(0);
-    window.addEventListener("scroll", this.handleScroll);
-  }
 
   render() {
     return (
@@ -56,19 +67,60 @@ class App extends React.Component {
         >
           <div id="wrap">
             <Landing />
+            <VisibilitySensor onChange={this.handleLandingVisibility}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 709,
+                  height: 1,
+                  left: 1,
+                  width: 1,
+                  background: "#313131"
+                }}
+              />
+            </VisibilitySensor>
           </div>
 
           <div id="wrap2">
             <Work updateBodyHeight={this.updateBodyHeight} />
+            <VisibilitySensor onChange={this.handleWorkVisibility}>
+              <div style={{ height: 1, background: "whitesmoke" }} />
+            </VisibilitySensor>
           </div>
 
           <div id="wrap3">
             <About />
+            <VisibilitySensor onChange={this.handleAboutVisibility}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 709,
+                  height: 1,
+                  left: 1,
+                  width: 1,
+                  background: "whitesmoke"
+                }}
+              />
+            </VisibilitySensor>
           </div>
 
           <div id="wrap4">
             <Contact />
+            <VisibilitySensor onChange={this.handleContactVisibility}>
+              <div
+                style={{
+                  height: 1,
+                  background: "#313131",
+                  position: "absolute",
+                  height: 11,
+                  width: 11,
+                  bottom: 276,
+                  left: 40
+                }}
+              />
+            </VisibilitySensor>
           </div>
+
           <div
             id="footer"
             className={
@@ -87,6 +139,9 @@ class App extends React.Component {
               />
             </AnchorLink>
           </div>
+          <VisibilitySensor onChange={this.handleFooterVisibility}>
+            <div style={{ height: 1, background: "#313131" }} />
+          </VisibilitySensor>
         </div>
         <Footer />
       </Fragment>

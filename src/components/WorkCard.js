@@ -41,6 +41,7 @@ export default function WorkCard(props) {
     </div>
   ) : cardClass === "cardBig" ? (
     <NoAnchorCard
+      resetCards={props.resetCards}
       index={index}
       onClick={onClick}
       cardClass={cardClass}
