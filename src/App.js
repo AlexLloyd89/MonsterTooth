@@ -68,23 +68,41 @@ class App extends React.Component {
           <div id="wrap">
             <Landing />
             <VisibilitySensor onChange={this.handleLandingVisibility}>
-              <div style={{ height: 1, background: "#9de4d7" }} />
+              <div
+                style={{
+                  position: "absolute",
+                  top: 709,
+                  height: 1,
+                  left: 1,
+                  width: 1,
+                  background: "#313131"
+                }}
+              />
             </VisibilitySensor>
           </div>
 
           <div id="wrap2">
             <Work updateBodyHeight={this.updateBodyHeight} />
+            <VisibilitySensor onChange={this.handleWorkVisibility}>
+              <div style={{ height: 1, background: "whitesmoke" }} />
+            </VisibilitySensor>
           </div>
-          <VisibilitySensor onChange={this.handleWorkVisibility}>
-            <div style={{ height: 1, background: "whitesmoke" }} />
-          </VisibilitySensor>
 
           <div id="wrap3">
             <About />
+            <VisibilitySensor onChange={this.handleAboutVisibility}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 709,
+                  height: 1,
+                  left: 1,
+                  width: 1,
+                  background: "whitesmoke"
+                }}
+              />
+            </VisibilitySensor>
           </div>
-          <VisibilitySensor onChange={this.handleAboutVisibility}>
-            <div style={{ height: 1, background: "whitesmoke" }} />
-          </VisibilitySensor>
 
           <div id="wrap4">
             <Contact />
