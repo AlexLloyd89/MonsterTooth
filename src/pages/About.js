@@ -34,7 +34,7 @@ export default function About() {
             <p>
               Monster Tooth is a Raleigh, NC based web development agency. Born
               out of the love for coding that Alex and Barry share. Monster
-              Tooth wants nothing more than to help you{" "}
+              Tooth wants nothing more than to help{" "}
               <span style={{ fontWeight: "bold" }}>you</span> build that really
               cool app you thought of while you were falling asleep that one
               night.
